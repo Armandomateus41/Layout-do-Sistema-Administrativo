@@ -1,0 +1,168 @@
+*{ /* atruir para aquivo inteiro*/
+margin: 0;
+padding: 0;
+box-sizing: border-box; /* retira o espaço total dos itens*/
+
+}
+
+/* cores do projetos*/
+:root{
+    --site-color: #3a7afe;
+    --main-color: #ebeef6;
+    --active-color: #d4def7;
+    --bg-color: #ecedf0;
+    --second-color: #f1f1f1;
+    --third-color: #9fa7bd;
+    --main-bg-color: #192039;
+    --second-bg-color: #1e2746;
+    --third-bg-color: #3a7afe;
+    --fourth-bg-color: #131b38;
+    --primary-color: #0088cc;
+    --success-color: #47a447;
+    --info-color: #5bc0de;
+    --warning-color: #ed9c28;
+    --danger-color: #d2322d;
+}
+
+/* inicio do corpo doi projeto*/
+
+body{
+    background-color: var(--main-color); /* cor  do fundo do projecto*/
+
+}
+
+/* inicio personalizar area d-flex*/
+
+.d-flex {
+    display: flex; /* primeiro */
+    align-items: center; /* centralizar itens na parte superior */
+    justify-content: center; /* e para aliar lateral esquerda e direita no centro*/
+    height: 100vh; /*  centralizar altura */  
+
+}
+/* fim personalizar area d-flex*/
+
+/* inicio personalizar area container-login */
+.container-login {
+width: 400px; /*largura 400 */
+ display: flex;
+  flex-direction: row;
+  margin: 0  5px;
+   /*cor do espaço */
+
+}
+
+/* Fim  personalizar area container-login */
+
+/*Inicio personalizar area wrapper-login*/
+
+.wrapper-login{
+width: 100%; /*largura*/
+background-color: var(--second-color);
+border-radius: 5px; /* bordar no espaço*/
+box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 1); /* adicionar sombra*/
+
+}
+/*fim personalizar area wrapper-login*/
+
+
+/*Inicio personalizar area wrapper-login title*/
+
+
+.wrapper-login .title {
+    height: 90px; /* altura */
+    background-color: var(--main-bg-color);
+    border-radius: 5px 5px 0 0; /*preechecimento da cor da borda lateral area restrita */
+    color: var(--main-color); /* cor da letra*/
+    font-size: 30px; /* tamanho da fonte*/
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*fim personalizar area wrapper-login title*/
+
+
+
+/*Inicio personalizar area wrapper-login form-login row*/
+
+.wrapper-login .form-login{
+    padding: 25px; /* espaço das letras*/
+
+} 
+
+
+.wrapper-login .form-login .row{
+   height: 45px; /*altura do das linha de espaço*/
+   margin-bottom: 15px; 
+   position: relative; /*posição relativa*/
+
+    
+} 
+/*Inicio personalizar area wrapper-login form-login input*/
+.wrapper-login .form-login .row input{
+ height:100%;  /*altura*/
+ width: 100%; /* largura*/
+outline: none;
+padding-left: 60px;
+border-radius: 5px; /* bordar do espaço dos campos, email, e senha */
+border: 1px solid: var(--active-color);
+font-size: 16px; /* tamanho da fonte de dos campos e letras*/
+transition: all 0.3s ease; /* transição dos itens */
+
+ } 
+/*Inicio personalizar area wrapper-login form-login input*/
+
+
+/*Inicio personalizar area wrapper-login placeholder*/
+ .wrapper-login .form-login .row input::placeholder{
+color: var(--third-color);
+   
+    } 
+/*Inicio personalizar area icone*/
+
+.wrapper-login .form-login .row i {
+    position: absolute; /* para colocar icones dentro do campo*/
+    width: 47px; /*largura*/
+    height: 100%; /*altura*/
+    color: var(--main-color); /* cor da letra */
+    font-size: 18px; /*tamanho do icone , tamanho da letra */
+    background-color: var(--second-bg-color); /*cor do fundo do icones*/
+    border: 1px solid var(--active-color);
+    border-radius: 5px 0 0 5px; /* determinar a borda na parte inferior e superior*/
+    display: flex;  /*parte do alinha e centralizar*/
+    align-items: center;
+    justify-content: center;
+} 
+ /*fim personalizar area icone*/
+
+ /*Incio  personalizar area botão */
+ .wrapper-login .form-login .button input{
+    color: var(--main-color); /*cor da letra do botão*/
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 0;
+    background-color: var(--main-bg-color); /*cor do fundo do botão*/
+    border: 1px solid var(--active-color);
+    cursor: pointer;
+}
+/*fim personalizar area botão */
+
+.form-login .button input:hover{
+     background: var(--second-bg-color);
+}
+
+ /*Incio  personalizar area signup-link*/
+.wrapper-login .form-login .signup-link a{
+    color: var(--main-bg-color);
+    text-decoration: none; /*server para tira o traço abaixo do esqueceus senha */
+
+}
+
+.form-login .signup-link a:hover{
+    color: var(--site-color);
+}
+
+
