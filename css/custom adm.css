@@ -13,6 +13,9 @@
     --bg-color: #ecedf0;
     --second-color: #f1f1f1;
     --third-color: #9fa7bd;
+    --fourth-color: #fff;
+    --fifth-color: #000;
+    --sixth-color: #222;
     --main-bg-color: #192039;
     --second-bg-color: #1e2746;
     --third-bg-color: #3a7afe;
@@ -22,6 +25,7 @@
     --info-color: #5bc0de;
     --warning-color: #ed9c28;
     --danger-color: #d2322d;
+}
 }
 
 body {
@@ -244,10 +248,333 @@ body {
     font-size: 22px;
     flex-shrink: 0;
 }
-
-
-
-
 /*Fim da Sidebar */
 
+
+
+.content .wrapper {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg-color);
+}
+
+.content .row {
+    background-color: var(--fourth-color);
+    border-radius: 6px;
+    /*margin: 10px;*/
+}
+
+.wrapper .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+/*Inicio Dashboard */
+.row .box{
+     /*background-color: #f00; /* cor do fundo de teste*/
+    width: 23%; /*largura*/
+    margin:5px 1%;
+    height: 150px; /* altura dos icones*/
+    position: relative;
+    display: flex;
+    align-items: center;/* centralizar as letras*/
+    justify-content: center;
+    padding: 20px;
+    color: var(--fourth-color); /* cor do itens e letras*/
+    border-radius: 5px; /*bordar*/
+    overflow: hidden;
+    flex-direction: column;
+    box-shadow: 0 3px 4px 1px rgb(0, 0, 0, 0.12); /*sombra*/
+}
+
+.row .box-first{
+    background-color: var(--primary-color); /*cor do fundo*/
+
+}
+.row .box-second{
+    background-color: var(--success-color); /*cor do fundo*/
+    
+}
+.row .box-third{
+    background-color: var(--warning-color); /*cor do fundo*/
+    
+}
+.row .box-fourth{
+    background-color: var(--danger-color); /*cor do fundo*/
+    
+}
+
+.box  span{
+ margin: 5px 0;
+ font-size: 17px;
+ position: relative;
+}
+
+@media (max-width: 1024px) {
+ .row .box{
+    width: 48%;
+ }
+}
+
+@media(max-width: 768px) { /* responsivo*/
+    .row .box{
+        width: 98%;
+    }
+ }
+
+
+/*Fim Dashboard */
+
+
+
+
+
+/*Inicio Listar */
+.row .top-list{
+    width: 100%; /*largura*/
+    overflow: hidden;
+}
+
+.top-list .title-content{
+    float: left; /* para colocar na lateral direita*/
+    color: var(--main-bg-color);
+    padding: 10px 16px;
+    font-size: 17px;
+}
+
+.top-list .top-list-rigth{
+    padding: 10px 5px 5px 0;
+    float: right;
+}
+
+/*pesonalizar a tabela*/
+.table-list{
+    margin-top: 15px;
+    width: 100%;
+}
+.table-list .list-head .list-head-content{
+    background-color: var(--main-color); /*cor do fundo*/
+    color: var(--fourth-bg-color); /*cor da letra*/
+    padding: 10px;
+
+}
+.table-list .list-body{
+    background-color: var(--fourth-color); /*cor do fundo*/
+    color: var(--fourth-bg-color);/*cor da letra*/
+    padding: 8px;
+}
+
+/* responsivo colunas*/
+@media(max-width: 540px) {
+    .table-sm-none{
+        display: none;
+    }
+}
+/* responsivo colunas*/
+@media(max-width: 720px) {
+    .table-lg-none{
+        display: none;
+    }
+}
+/* quando for no computador*/
+@media(max-width: 1140px) {
+    .table-xl-none{
+        display: none;
+    }
+}
+
+ /* Inicio botao dropdown do listar */
+
+ /*personalizar o botão*/
+ .dropdown-btn-action {
+    background-color: var(--primary-color);
+    color: var(--fourth-color);
+    padding: 5px 8px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+
+.dropdown-btn-action:hover,
+.dropdown-btn-action:focus {
+    background-color: var(--fourth-color);
+    color: var(--primary-color);
+}
+
+.dropdown-action {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-action-item {
+    display: none;
+    background-color: var(--fourth-color);
+    min-width: 130px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-action-item a {
+    color: var(--sixth-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-action-item a:hover {
+    background-color: var(--main-color);
+}
+
+.show-dropdown-action {
+    display: block;
+}
+
+
+
+  /* Fim botao dropdown do listar */
+/* Inicio paginação */
+.content-pagination{
+    margin: 15px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination{ /* Paginação*/
+    display: inline-block;
+    font-size: 15px;
+
+}
+
+.pagination a {
+    color: var(--fourth-bg-color);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none; /*para não apresentar o text decorado*/
+    transition: background-color .3s;
+}
+
+.pagination a.active{
+    background-color: var(--second-bg-color);
+    color: var(--fourth-color);
+   
+}
+.pagination a:hover:not(.active) {
+    background-color: var(--main-bg-color);
+
+}
+
+/*Fim paginação */
+
+
+/*Fim Listar */
+
+/*Inicio personalizar botão */
+
+.btn-primary{
+    background-color: var(--primary-color); /*cor do fundo*/
+    color: var(--fourth-color); /*cor da letra*/
+    padding: 5px 8px; /* para o texto não ficar grudado na leteral*/
+    border: 1px solid var(--primary-color); /* borda*/
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition:all .3s ease;
+}
+
+/*personalizar quando o usuario passar o Mouse*/
+.btn-primary:hover{
+    background-color: var(--fourth-color);/* cor do fundo*/
+    color: var(--primary-color); /* cor da letra*/
+
+    width: ;
+}
+
+/* Personalizar botão Cadastrar*/
+.btn-success{
+    background-color: var(--success-color); /*cor do fundo*/
+    color: var(--fourth-color); /*cor da letra*/
+    padding: 5px 8px; /* para o texto não ficar grudado na leteral*/
+    border: 1px solid var(--success-color); /* borda*/
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition:all .3s ease;
+}
+
+/*personalizar quando o usuario passar o Mouse*/
+.btn-success:hover{
+    background-color: var(--fourth-color);/* cor do fundo*/
+    color: var(--success-color); /* cor da letra*/
+
+    width: ;
+}
+
+/* Personalizar o botão  Editar*/
+
+.btn-warnig{
+    background-color: var(--warning-color); /*cor do fundo*/
+    color: var(--fourth-color); /*cor da letra*/
+    padding: 5px 8px; /* para o texto não ficar grudado na leteral*/
+    border: 1px solid var(--warning-color); /* borda*/
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition:all .3s ease;
+}
+
+/*personalizar quando o usuario passar o Mouse*/
+.btn-warnig:hover{
+    background-color: var(--fourth-color);/* cor do fundo*/
+    color: var(--warning-color); /* cor da letra*/
+
+}
+
+/* Personalizar o botão  Apagar*/
+
+.btn-danger{
+    background-color: var(--danger-color); /*cor do fundo*/
+    color: var(--fourth-color); /*cor da letra*/
+    padding: 5px 8px; /* para o texto não ficar grudado na leteral*/
+    border: 1px solid var(--danger-color); /* borda*/
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition:all .3s ease;
+}
+
+/*personalizar quando o usuario passar o Mouse*/
+.btn-danger:hover{
+    background-color: var(--fourth-color);/* cor do fundo*/
+    color: var(--danger-color); /* cor da letra*/
+
+}
+
+/* Personalizar botão Info*/
+.btn-info{
+    background-color: var(--info-color); /*cor do fundo*/
+    color: var(--fourth-color); /*cor da letra*/
+    padding: 5px 8px; /* para o texto não ficar grudado na leteral*/
+    border: 1px solid var(--info-color); /* borda*/
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition:all .3s ease;
+}
+
+/*personalizar quando o usuario passar o Mouse*/
+.btn-info:hover{
+    background-color: var(--fourth-color);/* cor do fundo*/
+    color: var(--info-color); /* cor da letra*/
+
+}
+
+/*Fim personalizar botão */
 /* fim conteudo */
