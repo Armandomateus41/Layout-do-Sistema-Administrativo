@@ -72,12 +72,21 @@
     <!--Incio da Sidebar-->
 
     <div class="sidebar">
-        <a href="index.html" class="sidebar-nav">
-            <i class="icon fa-solid fa-house"></i><span>Dashbord</span></a> <!--aqui foi adcionado o icone do Dashbord-->
-            <a href="Listar.html" class="sidebar-nav active">
-                <i class="icon fa-solid fa-users"></i><span>Listar</span></a>
-             <a href="página de login.html" class="sidebar-nav">
-                <i class="active fa-solid fa-arrow-right-from-bracket"></i></i><span>Sair</span></a>
+        <a href="index.html" class="sidebar-nav active"><i class="icon fa-solid fa-house"></i><span>Dashboard</span></a>
+
+        <a href="listar.html" class="sidebar-nav"><i class="icon fa-solid fa-list active"></i><span>Listar</span></a>
+        
+        <a href="formulário.html" class="sidebar-nav"><i class="icon fa-solid fa-file-lines active"></i><span>Formulario</span></a>
+        
+        <a href="visualizar.html" class="sidebar-nav"><i class="icon fa-solid fa-eye "></i><span>Visualizar</span></a>
+
+        <a href="alert.html" class="sidebar-nav active"><i class="icon fa-solid fa-triangle-exclamation"></i><span>Alerta</span></a>
+        
+        <a href="button.html" class="sidebar-nav active"><i
+            class="icon fa-solid fa-square-check"></i><span>Botão</span></a>
+       
+        <a href="login.html" class="sidebar-nav"><i class="icon fa-solid fa-arrow-right-from-bracket"></i><span>Sair</span></a>
+
     </div>
     <!--Fim da Sidebar -->
 
@@ -89,8 +98,9 @@
                 <div class="top-list-rigth">
                     <!--botão-->
                     <!--usei o icones para subistuir as letras , cadastrar , apagar, editar , visualizar-->
-                 <!-- <button  type="button" class="btn-success">Cadastrar</button>--> 
-                    <button  type="button" class="btn-success"><i class="fa-solid fa-square-plus"></i></button>
+                 <a href="formulário.html"class="btn-success">Cadastrar</a>
+                
+                    <!--<button  type="button" class="btn-success"><i class="fa-solid fa-square-plus"></i></button>-->
                     
                 </div>
             </div>
@@ -110,7 +120,7 @@
             </thead>
             <!--parte do  corpo conteudo-->
             <tbody class="list-body">
-                <<tr>
+                <tr>
                     <td class="list-body-content">3</td>
                     <td class="list-body-content">Armando 3</td>
                     <td class="list-body-content table-sm-none">armando34@live.com.pt</td>
@@ -127,8 +137,8 @@
                         <div class="dropdown-action">
                             <button onclick="actionDropdown(1)" class="dropdown-btn-action">Ações</button>
                             <div id="actionDropdown1" class="dropdown-action-item">
-                                <a href="#">Visualizar</a>
-                                <a href="#">Editar</a>
+                                <a href="visualizar.html">Visualizar</a>
+                                <a href="formulário.html">Editar</a>
                                 <a href="#">Apagar</a>
                             </div>
                         </div>
@@ -153,8 +163,8 @@
                         <div class="dropdown-action">
                             <button onclick="actionDropdown(2)" class="dropdown-btn-action">Ações</button>
                             <div id="actionDropdown2" class="dropdown-action-item">
-                                <a href="#">Visualizar</a>
-                                <a href="#">Editar</a>
+                                <a href="visualizar.html">Visualizar</a>
+                                <a href="formulário.html">Editar</a>
                                 <a href="#">Apagar</a>
                             </div>
                         </div>
@@ -179,8 +189,8 @@
                         <div class="dropdown-action">
                             <button onclick="actionDropdown(3)" class="dropdown-btn-action">Ações</button>
                             <div id="actionDropdown3" class="dropdown-action-item">
-                                <a href="#">Visualizar</a>
-                                <a href="#">Editar</a>
+                                <a href="visualizar.html">Visualizar</a>
+                                <a href="formulário.html">Editar</a>
                                 <a href="#">Apagar</a>
                             </div>
                         </div>
